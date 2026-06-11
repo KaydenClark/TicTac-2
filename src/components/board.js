@@ -2,14 +2,6 @@ import React from 'react'
 import Square from './square'
 import '../style.css'
 
-function Square(props) {
-    return (
-      <button className="square" onClick={props.onClick}>
-        {props.value}
-      </button>
-    );
-}
-
 class Board extends React.Component{
     constructor(props) {
         super(props);
@@ -25,7 +17,7 @@ class Board extends React.Component{
         squares[i] = this.state.xIsNext ? 'X' : 'O';
         this.setState({
             squares: squares,
-            xIsNext: !true.state.xIsNext
+            xIsNext: !this.state.xIsNext
         });
     }
 
@@ -63,3 +55,5 @@ class Board extends React.Component{
         )
     }
 }
+
+export default Board
